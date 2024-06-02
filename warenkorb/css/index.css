@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*? CSS Variables */
+:root {
+  --blue: #002F6C;
+  --grey-background: #F0F4F6;;
+  --grey-ton: #48494B;
+  --green: #4A9500;
+  --font-size:14px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*? Global Icons */
+i {
+  color:  var(--grey-ton);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+i:hover {
+  color: white;
+  border-radius: 50%;
+  background-color: var(--grey-ton);
+}
+
+/** Header */
+header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1rem;
+  background-color: var(--grey-background);
+  color: var(--blue);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+
+
+/** NAV */
+nav {
+  padding: 0 1rem;
+  text-align:center;
+}
+nav .my-cart {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 1rem;
+}
+nav .my-cart span {
+  font-weight: 100;
+  color: var(--grey-ton);
+}
+
+
+.progress-bar1{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:var(--grey-background)
+}
+
+.progress-bar1 progress {
+  width:100%
+}
+
+.progress-bar1.default-bar{
+  display:none;
+}
+
+.progress-bar2{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:var(--grey-background)
+}
+
+.progress-bar2.shipping-bar{
+  display:none;
+}
+
+.progress-bar2 progress {
+  width:100%
+}
+.progress-bar3{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:var(--grey-background);
+  height: 55px;
+}
+
+.progress-bar3.gift-bar{
+  display:none;
+}
+
+.progress-bar3 span {
+  color:var(--green);
+}
+
+.progress-bar3 progress {
+  width:100%
+}
+
+progress { color: #002F6C; }
+
+/** ------- MAIN --------- */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  gap: 1rem 4rem;
+}
+
+
+/*? Product List section */
+main .product-list {
+  /* flex: 4; */
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+}
+main .product-list .store {
+  padding: 1.2rem 0.5rem;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 2px solid var( --grey-background);
+}
+
+main .product-list .no-product {
+  text-align: center;
+  padding: 1rem;
+  /* color: var(--orange-dark); */
+  font-size: 20px;
+}
+main .product {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1.1rem;
+  border: 1px solid var( --grey-background);
+  border-radius: 25px;
+}
+
+main .product img {
+  width: 120px;
+  height: 120px;
+
+}
+main .product.gift {
+  border: 1px solid var( --green);
+}
+
+main .product.gift.no-product {
+  display:none;
+}
+
+
+main .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+
+main .product-info h2 {
+  font-size: 16px;
+
+}
+
+main .product-info span {
+  font-size: 12px;
+  color:var(--green)
+}
+
+
+main .product-info .price-quant {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+main .product-prices {
+  display:flex;
+  flex-direction:column;
+  align-items:end;
+}
+
+main .product-prices .line-through {
+  text-decoration: line-through;
+  font-size: 16px;
+  color: var(--green)
+}
+
+main .product-prices .line-through {
+  color:var( --grey-ton)
+}
+
+.dollar::after {
+  content: " €";
+}
+
+main .buttons-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+main .buttons-div .plus-trash {
+  border: 1px solid var(--grey-tone);
+  border-radius: 50px;
+  display: inline-block;
+}
+
+main .buttons-div i {
+  margin: 0.5rem;
+}
+
+main .buttons-div .dollar {
+  font-weight: 600;
+}
+
+/*? ---- Product List section --- */
+main .price-table {
+  padding-top: 15rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid var(--gray-medium);
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+  max-height: 250px;
+}
+
+main .price-table .info-check {
+  border-radius: 10px;
+  border: 1px solid var(--grey-background);
+  padding: 1rem;
+  margin: 0.1rem;
+  background:var(--grey-background);
+}
+
+main .price-table .info-check .check-block {
+  display:flex;
+  justify-content:flex-start;
+  font-size:var(--font-size);
+  flex: 1;
+  align-items: center;
+}
+
+main .price-table .info-check .check-block i{
+  color: var(--green)
+}
+
+main .price-table .finish-btn {
+  background:var(--blue);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  border: 1rem;
+}
+
+main .total-info {
+  margin-top: 1rem;
+}
+main .total-info.no-total{
+  display:none;
+}
+main .total-info .text-div .line-through.dollar{
+  text-decoration: line-through;
+}
+
+main .total-info .text-div .dollar.green{
+  color:var(--green);
+}
+
+main .total-info .text-div.end{
+  justify-content:flex-end
+}
+
+main .total-info .text-div span.green{
+  color:var(--green);
+}
+
+main .total-info .text-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*! ------ RESPONSIVE ------- */
+
+@media only screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  main .price-table {
+    flex: 1;
+  }
+  main .price-table .total-prices {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  
+  main .price-table .total-prices {
+    flex-direction: column;
+  }
+  main .buttons-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main .buttons-div i {
+    margin: 0.2rem;
+  }
+  main .buttons-div .dollar {
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main .product img {
+    width: 100px;
+    height: 100px;
+  }
+  main .buttons-div i {
+    margin: 0.1rem;
+  }
+}

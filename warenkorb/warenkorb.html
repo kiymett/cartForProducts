@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Warenkorb</title>
+
+</head>
+
+<body>
+  <header>
+    <i class="fa-solid fa-light fa-angle-left"></i>
+    <h3>weiter einkaufen</h3>
+    <i class="fa-solid fa-xmark"></i>
+  </header>
+  <nav>
+    <div class="my-cart">Ihr Warenkorb</div>
+  </nav>
+  <section class="progress-bar1 ">
+    <span>Kostenloser Versand ab 39,99€</span>
+    <progress id="file" value="0" max="100"> </progress>
+    <span>Noch 10€ bis zum kostenlosen Versand</span>
+  </section>
+  <section class="progress-bar2 shipping-bar">
+    <span>Kostenloses Geschenk ab 99,99€</span>
+    <progress id="file" value="50" max="100"> </progress>
+    <span>Noch 40,01€ bis zum kostenlosen Geschenk</span>
+  </section>
+  <section class="progress-bar3 gift-bar">
+    <span>Sie erhalten ein Geschenk & Versand kostenlos!</span>
+    <progress id="file" value="100" max="100"> </progress>
+
+  </section>
+  <main>
+    <section class="product-list">
+      <article class="products">
+        <div class="product">
+          <figure><img src="./img/mac.jpg" alt="img" /></figure>
+          <div class="product-info">
+            <h2>MAC</h2>
+            <div class="price-quant">
+              <div class="buttons-div">
+                <div>
+                  <div class="plus-trash">
+                    <i class="fa-regular fa-trash-can"></i>
+                    <span class="quantity" id="quantity">1</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="product-prices">
+                <strong class="line-through dollar" id="discounted-price">1031.99</strong>
+                <span class="dollar" id="line-through-price">1029.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product gift no-product">
+          <figure><img src="./img/mouse.jpg" alt="img" /></figure>
+          <div class="product-info">
+            <h2>Mouse</h2>
+            <span>Geschenk</span>
+            <div class="product-prices">
+              <strong class="line-through line-gift dollar" id="discounted-price">83.99</strong>
+              <span class="dollar">0.0</span>
+            </div>
+            <div class="buttons-div">
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="price-table">
+        <div class="info-check">
+          <div class="check-block">
+            <i class="fa-solid fa-check"></i>
+            <span>30 Tage Geld-zurück-Garantie</span>
+          </div>
+          <div class="check-block">
+            <i class="fa-solid fa-check"></i>
+            <span>Lieferung in 1-3 Werktagen</span>
+          </div>
+        </div>
+        <div class="total-info">
+          <div class="text-div">
+            <span>Versand</span>
+            <span class="dollar" id="shipping">4.99</span>
+          </div>
+          <div class="text-div end">
+            <span class="line-through dollar" id="discounted-total">31.99</span>
+          </div>
+
+          <div class="text-div">
+            <span>Zwischensumme</span>
+            <span class="dollar" id="total">29,99</span>
+          </div>
+        </div>
+        <button class="finish-btn">jetzt zur Kasse</button>
+      </article>
+    </section>
+  </main>
+
+  <script src="warenkorb.js"></script>
+</body>
+
+</html>
